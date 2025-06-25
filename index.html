@@ -2,33 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Ping coming soon page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
 </head>
 <body>
 
-  We are launching soon!
+  <main id="content">
+    <header id="content-header">
+      <img src="assets/images/logo.svg" class="logo-image" alt="Ping logo">
+      <h1 class="content-title"><span>We are launching</span> soon!</h1>
+      <p class="content-description">Subscribe and get notified</p>
+      <form action="" class="form-content">
+        <input type="email" id="form-email" placeholder="Your email address...">
+        <button type="submit" id="form-button">Notify Me</button>
+      </form>
+    </header>
 
-  Subscribe and get notified
+    <section id="content-main">
+      <img src="assets/images/illustration-dashboard.png" class="dash-image" alt="Dashboard illustrated">
+    </section>
 
-  Notify Me
+    <footer id="content-footer">
+      <div class="social-icons">
+        <a href="https://www.facebook.com/?locale=pt_BR" target="_blank"><img src="assets/images/icon-facebook.svg" alt="icon-facebook"></a>
+        <a href="https://x.com/?lang=pt" target="_blank"><img src="assets/images/icon-twitter.svg" alt="icon-twitter"></a>
+        <a href="https://br.pinterest.com/" target="_blank"><img src="assets/images/icon-pinterest.svg" alt="icon-pinterest"></a>
+      </div>
+      <div class="rights">&copy; Copyright Ping. All rights reserved.</div>
+    </footer>
+  </main>
 
-  &copy; Copyright Ping. All rights reserved.
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
 </body>
 </html>
