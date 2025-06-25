@@ -1,0 +1,12 @@
+body {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+#content {
+  max-width: 90vw;
+
+  
+}
