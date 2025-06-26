@@ -1,45 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Ping coming soon page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/index.css">
+    <title>Frontend Mentor | Ping coming soon page</title>
 
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/index.css" />
+  </head>
+  <body>
+    <main id="content">
+      <header id="content-header">
+        <img src="assets/images/logo.svg" class="logo-image" alt="Ping logo" />
+        <h1 class="content-title"><span>We are launching</span> soon!</h1>
+        <p class="content-description">Subscribe and get notified</p>
+        <form action="" class="form-content">
+          <input
+            type="email"
+            id="form-email"
+            placeholder="Your email address..."
+          />
+          <button type="submit" id="form-button">Notify Me</button>
+        </form>
+      </header>
 
-  <main id="content">
-    <header id="content-header">
-      <img src="assets/images/logo.svg" class="logo-image" alt="Ping logo">
-      <h1 class="content-title"><span>We are launching</span> soon!</h1>
-      <p class="content-description">Subscribe and get notified</p>
-      <form action="" class="form-content">
-        <input type="email" id="form-email" placeholder="Your email address...">
-        <button type="submit" id="form-button">Notify Me</button>
-      </form>
-    </header>
+      <section id="content-main">
+        <img
+          src="assets/images/illustration-dashboard.png"
+          class="dash-image"
+          alt="Dashboard illustrated"
+        />
+      </section>
 
-    <section id="content-main">
-      <img src="assets/images/illustration-dashboard.png" class="dash-image" alt="Dashboard illustrated">
-    </section>
-
-    <footer id="content-footer">
-      <div class="social-icons">
-        <a href="https://www.facebook.com/?locale=pt_BR" target="_blank"><img src="assets/images/icon-facebook.svg" alt="icon-facebook"></a>
-        <a href="https://x.com/?lang=pt" target="_blank"><img src="assets/images/icon-twitter.svg" alt="icon-twitter"></a>
-        <a href="https://br.pinterest.com/" target="_blank"><img src="assets/images/icon-pinterest.svg" alt="icon-pinterest"></a>
-      </div>
-      <div class="rights">&copy; Copyright Ping. All rights reserved.</div>
-    </footer>
-  </main>
-
-</body>
+      <footer id="content-footer">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/?locale=pt_BR" target="_blank"
+            ><img src="assets/images/icon-facebook.svg" alt="icon-facebook"
+          /></a>
+          <a href="https://x.com/?lang=pt" target="_blank"
+            ><img src="assets/images/icon-twitter.svg" alt="icon-twitter"
+          /></a>
+          <a href="https://www.instagram.com/" target="_blank"
+            ><img src="assets/images/icon-instagram.svg" alt="icon-pinterest"
+          /></a>
+        </div>
+        <div class="rights">&copy; Copyright Ping. All rights reserved.</div>
+      </footer>
+    </main>
+  </body>
 </html>
