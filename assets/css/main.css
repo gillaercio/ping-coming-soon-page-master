@@ -7,12 +7,14 @@ body {
 
 #content {
   max-width: 90vw;
+  /* border: 1px solid red; */
 
   #content-header {
     display: grid;
     justify-content: center;
     align-items: center;
     text-align: center;
+    /* border: 1px solid red; */
 
     .logo-image {
       width: 60px;
@@ -34,6 +36,7 @@ body {
       padding: 5px 0 20px;
       font: var(--text-md);
       color: var(--Very-Dark-Blue);
+      opacity: .6;
     }
 
     .form-content {
@@ -44,7 +47,7 @@ body {
       #form-email, #form-button {
         padding: 10px;
         border-radius: 30px;
-        border: 1px solid var(--Pale-Blue);
+        border: 2px solid var(--Pale-Blue);
         font: var(--text-md);
       }
 
@@ -66,16 +69,20 @@ body {
   }
 
   #content-main {
+    display: grid;
     margin-block: 20px;
-
+    
     .dash-image {
-      max-width: 90vw;
-      margin: auto;
+      /* max-width: 100%; */
+      width: 300px;
+      justify-self: center;
+      /* border: 1px solid red; */
     }
   }
 
   #content-footer {
     text-align: center;
+    border: 1px solid red;
     
     .social-icons {
       display: grid;
@@ -89,7 +96,7 @@ body {
         cursor: pointer;
         
         img {
-          width: 20px;
+          max-width: 20px;
           border: 1px solid var(--Pale-Blue);
           border-radius: 50%;
         }
@@ -99,6 +106,56 @@ body {
     .rights {
       font: var(--text-sm);
       color: var(--Very-Dark-Blue);
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #content {
+    #content-header {
+
+      .logo-image {
+        width: 90px;
+      }
+
+      .content-title {
+        font-size: clamp(2rem, 2.2rem + 1.666vw, 3rem);
+      }
+
+      .content-description {
+        font-size: clamp(1.2rem, 1.2rem + 1.666vw, 1.8rem);
+      }
+      
+      .form-content{
+        display: grid;
+        gap: 0;
+        grid-template-columns: repeat(2,auto);
+        justify-content: space-between;
+        width: 800px;
+        
+        #form-email, #form-button {
+          padding: 15px;
+          display: grid;
+          font-size: clamp(1.2rem, 1rem + 1.666vw, 1.6rem);
+        }
+
+        #form-email {
+          width: 500px;
+        }
+
+        #form-button {
+          width: 250px;
+        }
+      }
+    }
+
+    #content-main {
+      /* max-width: 1024px; */
+      margin-block: 20px;
+
+      .dash-image {
+        width: 800px;
+      }
     }
   }
 }
