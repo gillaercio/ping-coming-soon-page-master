@@ -28,12 +28,14 @@
         <h1 class="content-title"><span>We are launching</span> soon!</h1>
         <p class="content-description">Subscribe and get notified</p>
         <form action="" class="form-content">
-          <input
-            type="email"
-            id="form-email"
-            placeholder="Your email address..."
-          />
-          <button type="submit" id="form-button">Notify Me</button>
+          <div class="form-row">
+            <div class="input-wrapper">
+              <input
+              type="email" id="form-email" placeholder="Your email address..."/>
+              <span class="error-message"></span>
+            </div>
+            <button type="submit" id="form-button" onclick="sendButton(event)">Notify Me</button>
+          </div>
         </form>
       </header>
 
@@ -60,5 +62,6 @@
         <div class="rights">&copy; Copyright Ping. All rights reserved.</div>
       </footer>
     </main>
+    <script src="assets/js/index.js"></script>
   </body>
 </html>
