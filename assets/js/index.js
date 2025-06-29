@@ -21,6 +21,8 @@ function sendButton(event) {
   } else {
     email.style.borderColor = "var(--Pale-Blue)";
     errorMessage.style.display = "none";
+    alert("Thanks for subscribing!");
+    email.value = "";
   }
 }
 

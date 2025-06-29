@@ -13,7 +13,6 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-        border: 1px solid red;
 
     .logo-image {
       width: 60px;
@@ -22,7 +21,7 @@ body {
     }
 
     .content-title {
-      padding-block: 15px;
+      padding-block: 10px;
       font: var(--text-lg);
       color: var(--Very-Dark-Blue);
       
@@ -39,10 +38,9 @@ body {
     }
 
     .form-content {
-      /* max-width: 100%; */
       display: grid;
-      gap: 10px;
-      border: 1px solid red;
+      height: 120px;
+      align-items: flex-start;
 
       #form-email, #form-button {
         padding: 10px;
@@ -51,16 +49,20 @@ body {
         font: var(--text-md);
       }
 
-      #form-email {
-        max-width: 400px;
+      .input-wrapper {
+        width: 300px;
         opacity: .5;
+
+        #form-email {
+          width: 100%;
+        }
       }
 
       .error-message {
         color: var(--Light-Red);
         font: var(--text-md);
         font-style: italic;
-        margin-block: 10px;
+        margin-top: 5px;
         display: none;
       }
 
@@ -89,7 +91,6 @@ body {
   #content-main {
     display: grid;
     margin-block: 20px;
-    border: 1px solid red;
     
     .dash-image {
       width: 300px;
@@ -98,9 +99,7 @@ body {
   }
 
   #content-footer {
-    text-align: center;
-    
-    .social-icons {
+      .social-icons {
       display: grid;
       grid-template-columns: repeat(3,auto);
       gap: 20px;
@@ -109,19 +108,46 @@ body {
       margin-bottom: 10px;
       
       a {
+        width: 30px;
+        height: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 30px 30px;
+        border-radius: 50%;
+        border: 1px solid var(--Pale-Blue);
         cursor: pointer;
-        
-        img {
-          max-width: 20px;
-          border: 1px solid var(--Pale-Blue);
-          border-radius: 50%;
-        }
+        transition: background-image 0.3s ease;
+      }
+
+      .icon-facebook {
+        background-image: url('../images/icon-facebook.svg');
+      }
+
+      .icon-facebook:hover {
+        background-image: url('../images/icon-state-facebook.svg');
+      }
+
+      .icon-twitter {
+        background-image: url('../images/icon-twitter.svg');
+      }
+
+      .icon-twitter:hover {
+        background-image: url('../images/icon-state-twitter.svg');
+      }
+
+      .icon-instagram {
+        background-image: url('../images/icon-instagram.svg');
+      }
+
+      .icon-instagram:hover {
+        background-image: url('../images/icon-state-instagram.svg');
       }
     }
 
     .rights {
       font: var(--text-sm);
       color: var(--Very-Dark-Blue);
+      text-align: center;
     }
   }
 }
@@ -131,7 +157,7 @@ body {
     #content-header {
 
       .logo-image {
-        width: 90px;
+        width: 80px;
       }
 
       .content-title {
@@ -144,8 +170,8 @@ body {
       
       .form-content{
         width: 800px;
+        height: 60px;
         justify-content: center;
-        border: 1px solid red;
         
         #form-email, #form-button {
           padding: 15px;
@@ -157,8 +183,14 @@ body {
           width: 500px;
         }
 
+        .error-message {
+          justify-self: flex-start;
+          margin-left: 20px;
+        }
+
         #form-button {
           width: 250px;
+          align-self: flex-start;
         }
       }
 
@@ -171,7 +203,6 @@ body {
 
     #content-main {
       margin-block: 20px;
-        border: 1px solid red;
 
       .dash-image {
         width: 800px;
