@@ -13,6 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+        border: 1px solid red;
 
     .logo-image {
       width: 60px;
@@ -38,9 +39,10 @@ body {
     }
 
     .form-content {
-      max-width: 100%;
+      /* max-width: 100%; */
       display: grid;
       gap: 10px;
+      border: 1px solid red;
 
       #form-email, #form-button {
         padding: 10px;
@@ -50,18 +52,20 @@ body {
       }
 
       #form-email {
+        max-width: 400px;
         opacity: .5;
       }
 
       .error-message {
         color: var(--Light-Red);
-        font: var(--text-sm);
+        font: var(--text-md);
         font-style: italic;
-        margin-right: 5px;
+        margin-block: 10px;
         display: none;
       }
 
       #form-button {
+        width: 100%;
         background-color: var(--Blue);
         color: var(--Pale-Blue);
         cursor: pointer;
@@ -75,21 +79,17 @@ body {
 
     .form-row {
       display: flex;
-      gap: 20px;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-
-    .input-wrapper {
-      display: flex;
+      gap: 10px;
       flex-direction: column;
-      flex-grow: 1;
+      align-items: center;
+      justify-content: center;
     }
   }
 
   #content-main {
     display: grid;
     margin-block: 20px;
+    border: 1px solid red;
     
     .dash-image {
       width: 300px;
@@ -145,6 +145,7 @@ body {
       .form-content{
         width: 800px;
         justify-content: center;
+        border: 1px solid red;
         
         #form-email, #form-button {
           padding: 15px;
@@ -152,7 +153,7 @@ body {
           font-size: clamp(1.2rem, 1rem + 1.666vw, 1.6rem);
         }
 
-        #form-email {
+        .input-wrapper {
           width: 500px;
         }
 
@@ -160,10 +161,17 @@ body {
           width: 250px;
         }
       }
+
+      .form-row {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+      }
     }
 
     #content-main {
       margin-block: 20px;
+        border: 1px solid red;
 
       .dash-image {
         width: 800px;

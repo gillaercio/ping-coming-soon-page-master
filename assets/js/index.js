@@ -1,65 +1,33 @@
-const email = document.querySelector("#form-email");
-
-const fields = [
-  {element: email, placeholder: "Your email address...", message: "Please provide a valid email address"}
-];
-
-document.querySelector("#form-email").addEventListener("click", function(event) {
+function sendButton(event) {
   event.preventDefault();
 
-  fields.forEach(field => {
-    const input = field.element;
-    // const errorMessage = input.nextElementSibling;
-    const errorMessage = input.parentElement.querySelector(".error-message");
+  const email = document.querySelector("#form-email");
+  const errorMessage = email.parentElement.querySelector(".error-message");
 
-    let hasError = input.value.trim() === "";
+  let hasError = email.value.trim() === "";
 
-    if (input === email && input.value.trim() !== "") {
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      hasError = !emailPattern.test(input.value.trim());
-    }
+  if (email.value.trim() !== "") {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    hasError = !emailPattern.test(email.value.trim());
+  }
 
-    if (hasError) {
-      if (input === email && input.value.trim() !== "") {
-        input.placeholder = "email@example/com";
-      } else {
-        input.placeholder = "";
-      }
+  if (hasError) {
+    email.style.borderColor = "var(--Light-Red)";
+    errorMessage.textContent = "Please provide a valid email address";
+    errorMessage.style.display = "block";
 
-      input.classList.add("error");
-      input.dataset.placeholder = input.placeholder;
-      input.value = "";
-      input.style.borderColor = "var(--Light-Red)";
+    email.value = "";
+    email.placeholder = "email@example.com";
+  } else {
+    email.style.borderColor = "var(--Pale-Blue)";
+    errorMessage.style.display = "none";
+  }
+}
 
-      if (errorMessage) {
-        errorMessage.textContent = field.message;
-        errorMessage.style.display = "block";
-      }
-    } else {
-      input.classList.remove("error");
-      input.style.borderColor = "var(--Pale-Blue)";
-      input.placeholder = input.dataset.placeholder || "";
+document.querySelector("#form-email").addEventListener("input", function() {
+  const email = this;
+  const errorMessage = email.parentElement.querySelector(".error-message");
 
-      if (errorMessage) {
-        errorMessage.textContent = "";
-        errorMessage.style.display = "none";
-      }
-    }
-  });
-});
-
-fields.forEach(field => {
-  field.element.addEventListener("input", () => {
-    const input = field.element;
-    const errorMessage = input.parentElement.querySelector(".error-message");
-
-    input.classList.remove("error");
-    input.placeholder = field.placeholder;
-    input.style.borderColor = "var(--Pale-Blue)";
-
-    if(errorMessage) {
-      errorMessage.textContent = "";
-      errorMessage.style.display = "none";
-    }
-  });
-});
+  email.style.borderColor = "var(--Pale-Blue)";
+  errorMessage.style.display = "none";
+})
